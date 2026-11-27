@@ -1,7 +1,7 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -std=c11
+CFLAGS = -Wall -Wextra -g -std=gnu11
 TARGET = MyShellProject
-SRCS = main.c 
+SRCS = main.c parser.c executor.c builtins.c
 OBJS = $(SRCS:.c=.o)
 $(TARGET): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
